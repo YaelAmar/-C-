@@ -6,43 +6,33 @@ using System.Threading.Tasks;
 
 namespace Lesson5
 {
-    enum FuelType
+    //enum FuelType
+    //{
+    //    benzin=1,
+    //    neft
+    //}
+    class Bus:Vehicle
     {
-        benzin=1,
-        neft
-    }
-    class Bus
-    {
-        public int NumOfSeats { get; set; }
-        public string FuelType { get; set; }
-        public string Company { get; set; }
-        public int Id { get; set; }
+       
         public int NumOfRavKav { get; set; }
         public int NumOfBell { get; set; }
         public bool Screen { get; set; }
 
-        public Bus()
+        public Bus():base()
         {
 
         }
 
-        public Bus(int numOfSeats, string fuelType, string company, int id, int numOfRavKav, int numOfBell, bool screen)
+        public Bus(int numOfSeats, string fuelType, string company, int id, int numOfRavKav, int numOfBell, bool screen):base( numOfSeats,  fuelType,  company,  id)
         {
-            NumOfSeats = numOfSeats;
-            FuelType = fuelType;
-            Company = company;
-            Id = id;
+           
             NumOfRavKav = numOfRavKav;
             NumOfBell = numOfBell;
             Screen = screen;
         }
 
-        public Bus(Bus b)
+        public Bus(Bus b):base(b.NumOfSeats, b.FeulType, b.Company, b.Id)
         {
-            NumOfSeats = b.NumOfSeats;
-            FuelType = b.FuelType;
-            Company = b.Company;
-            Id = b.Id;
             NumOfRavKav = b.NumOfRavKav;
             NumOfBell = b.NumOfBell;
             Screen = b.Screen;
@@ -50,9 +40,7 @@ namespace Lesson5
 
         public void Print()
         {
-            Console.WriteLine(" NumOfSeats: "+NumOfSeats);
-            Console.WriteLine(" FuelType: "+ FuelType);
-            Console.WriteLine(" Company: "+ Company);
+            base.Print();
             Console.WriteLine(" Id: "+ Id);
             Console.WriteLine(" NumOfRavKav: "+ NumOfRavKav);
             Console.WriteLine(" NumOfBell: "+NumOfBell);
@@ -62,14 +50,7 @@ namespace Lesson5
 
         public void GetDetails()
         {
-            Console.WriteLine("Enter NumOfSeats");
-            NumOfSeats=int.Parse(Console.ReadLine());
-            Console.WriteLine("Enter FuelType");
-            FuelType = Console.ReadLine();
-            Console.WriteLine("Enter Company");
-            Company = Console.ReadLine();
-            Console.WriteLine("Enter Id");
-            Id =int.Parse( Console.ReadLine());
+            base.GetDetails();
             Console.WriteLine("Enter NumOfRavKav");
             NumOfRavKav = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter NumOfBell");
