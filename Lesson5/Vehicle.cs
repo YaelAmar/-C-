@@ -26,7 +26,7 @@ namespace Lesson5
             Id = id;
         }
 
-        public void Print()
+        public  void Print()
         { 
             Console.WriteLine(" NumOfSeats: " + NumOfSeats);
             Console.WriteLine(" FuelType: " + FeulType);

@@ -28,7 +28,7 @@ namespace Lesson5
             Area = area;
         }
 
-        public void Print()
+        public  void Print()
         {
             base.Print();
             Console.WriteLine(" RedLights: " + RedLights);

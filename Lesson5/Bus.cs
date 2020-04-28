@@ -38,9 +38,9 @@ namespace Lesson5
             Screen = b.Screen;
         }
 
-        public void Print()
+        public  void Print()
         {
-            base.Print();
+           base.Print();
             Console.WriteLine(" Id: "+ Id);
             Console.WriteLine(" NumOfRavKav: "+ NumOfRavKav);
             Console.WriteLine(" NumOfBell: "+NumOfBell);

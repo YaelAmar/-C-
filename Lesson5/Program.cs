@@ -50,8 +50,11 @@ namespace Lesson5
             Bus bus = new Bus();
             bus.GetDetails();
             bus.Print();
-          
-            Console.ReadLine();
+
+
+            
+
+                      Console.ReadLine();
 
         }
     }
